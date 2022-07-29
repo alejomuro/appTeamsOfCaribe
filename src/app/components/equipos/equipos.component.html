@@ -1,0 +1,8 @@
+<h1>Equipos <small>LVBP, LIDOM, LBPRC, LMB</small></h1>
+ <hr>
+ 
+ <div class="card-columns">
+    <!--el NGfor es para clonar todas las tarjetas -->
+  <app-equipo-tarjeta (equipoSeleccionado)="verEquipo( $event )" [equipo]="foo" [index]="i" *ngFor="let foo of equipos; let i = index"></app-equipo-tarjeta>
+
+ </div> 

@@ -1,0 +1,32 @@
+
+<h1>{{equipo.nombre | uppercase}} <small>{{equipo.aparicion | date:"Y"}} </small></h1>
+
+<hr>
+
+<div class="row animated fadeIn fast">
+    <div class="col-md-4">
+        <img [src]="equipo.img" class="img-fluid" [alt]="equipo.nombre">
+        <p>ciudad: {{equipo.ciudad}} </p>
+        <p>estadio: {{equipo.estadio}} </p>
+        
+       <p>titulos en su pais: {{equipo.titulos}} </p>
+       <p>titulos en series del caribe: {{equipo.titulosSc}} </p> 
+    
+       <a [routerLink]="['/equipos']" class="btn btn-outline-danger btn-block">regresar...</a>
+
+    </div>
+    <div class="col-md-8">
+        <h3>{{equipo.nombre | uppercase}} </h3>
+        <hr>
+        <p>
+            {{equipo.bio}}
+        </p>
+     <h3><p>pertenece a</p></h3>
+        <div>
+            <img class="img-logo" *ngIf="equipo.liga=='LVBP'" src="assets/img/lvbp.jpg" alt="LVBP">
+            <img class="img-logo" *ngIf="equipo.liga=='LIDOM'"  src="assets/img/lidom.jpg" alt="LIDOM">
+            <img class="img-logo" *ngIf="equipo.liga=='LBPRC'"  src="assets/img/lbprc.jpg" alt="LBPRC">
+            <img class="img-logo" *ngIf="equipo.liga=='LMB'" src="assets/img/lmb.jpg" alt="LMB">
+        </div>
+    </div>
+</div>

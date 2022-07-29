@@ -1,0 +1,20 @@
+<div class="card animated fadeIn fast" >
+    <img [src]="equipo.img" width="200" [alt]="equipo.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{ equipo.nombre }}</h5>
+      <p class="card-text">{{ equipo.bio }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{ equipo.aparicion }}</small>
+    </div>
+
+   
+    <button (click)="verEquipo()" 
+    type="button" class="btn btn-outline-primary btn-block">
+        ver mas...
+    </button>
+    
+    <!-- 
+    <a [routerLink]="['/equipo',i]" class="btn btn-outline-primary btn-block">ver mas...</a>
+    -->
+</div>
